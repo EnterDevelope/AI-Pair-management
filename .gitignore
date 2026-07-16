@@ -1,0 +1,47 @@
+# Node / Next.js (app/ 단계에서 사용)
+node_modules/
+.next/
+out/
+dist/
+*.log
+.DS_Store
+.env*
+!.env.example
+.envrc
+.direnv/
+.npmrc
+.netrc
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# proper-lockfile 산출물 (*.lock 디렉토리)
+*.lock
+
+# TypeScript build output
+*.tsbuildinfo
+
+# AIPM 브릿지 큐 (git이 진짜 버전 스토리, history는 로컬 감사 흔적)
+.aipm/
+
+# 로컬 계획·운영 하네스·브라우저 검증 데이터 (공개 저장소 제외)
+.planning/
+research/
+test-project/
+harness/
+AGENTS.md
+CLAUDE.md
+.agents/
+.codex*
+.omx/
+output/
+.playwright-cli/
+
+# 공개 가능한 Claude 제품 명령만 허용
+.claude/*
+!.claude/commands/
+.claude/commands/*
+!.claude/commands/aipm-*.md

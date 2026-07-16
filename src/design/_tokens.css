@@ -1,0 +1,51 @@
+/* Source: Tailwind CSS v4 @theme; values per CONTEXT D-08 */
+/* Anti-slop design tokens — dark + green accent, calibrated oklch values */
+/* 2026-06-10: 사용자 결정으로 accent 색조 보라(295)→초록(150) 변경 (D-08 개정) */
+/* Forbidden: pure black/white hex, sans-serif fallback font, or v3 config.js tokens */
+
+@theme {
+  /* ── Colors — off-black bg + green accent, anti-slop corrected (D-07, D-08 개정) ── */
+  --color-bg: oklch(0.10 0.01 280);          /* off-black — pure #000 금지 */
+  --color-surface: oklch(0.14 0.01 280);     /* card / panel surface */
+  --color-border: oklch(0.22 0.02 280);      /* subtle border */
+  --color-text: oklch(0.92 0.01 280);        /* off-white body — pure #fff 금지 */
+  --color-text-muted: oklch(0.55 0.02 280);  /* secondary / placeholder text */
+  --color-accent: oklch(0.58 0.18 150);      /* green accent (C=0.18 — 네온 아님) */
+  --color-accent-hover: oklch(0.62 0.18 150); /* accent hover state */
+  --color-accent-dim: oklch(0.58 0.08 150);  /* dim accent for backgrounds */
+  --color-destructive: oklch(0.55 0.20 25);  /* destructive action red (C=0.20, 네온 아님) */
+
+  /* ── Typography — Geist only (D-08) ── */
+  --font-sans: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+
+  /* ── Spacing — 4px base grid ── */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  /* ── Border radius ── */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows — depth-aware, oklch-based (not flat black) ── */
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.4);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.5);
+  --shadow-lg: 0 8px 24px oklch(0 0 0 / 0.6);
+  --shadow-accent: 0 0 16px oklch(0.58 0.18 150 / 0.3);
+}

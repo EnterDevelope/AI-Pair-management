@@ -1,0 +1,11 @@
+# AIPM git 속성 — D-10/D-12 (00-05-PLAN.md)
+
+# graph JSON: ID 배열 시맨틱 3-way 머지 드라이버 사용 (D-10)
+# 서로 다른 id 추가는 자동 병합, 같은 필드 충돌만 마커로 표시
+graph/*.json merge=aipm-json-merge
+
+# 마크다운: 항상 JSON에서 재생성 → 충돌 만들지 않음 (D-12)
+# linguist-generated=true: GitHub 코드 통계에서 제외
+docs/*.md merge=ours
+docs/*.md linguist-generated=true
+*.md linguist-generated=true
